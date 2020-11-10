@@ -1,0 +1,17 @@
+body 
+{
+    background-color: black;
+}
+h1 
+{
+    color: white;
+    font-family: constantia;
+    text-align: center;
+}
+p 
+{
+    color : white;
+    font-family: consoles;
+    text-align: right;
+    font-size: 25px;
+}
