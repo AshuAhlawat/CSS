@@ -7,36 +7,68 @@
     <title>Tables</title>
 </head>
 <style>
+    .header{
+        font-size:40px;
+        text-align: center;
+    }
     table {
+        font-size:x-large;
+        margin-left: 20%;
+        margin-top: 7%;
         width: 60%;
-        border-collapse: collapse;
         border: 1px solid black;
+        overflow-x:auto;
+        border-radius: 5px;
+    }
+    th{
+        height: 50px;
+        background-color:rgb(39, 39, 39);
+        color:white;
+        border-right: 1px solid rgb(39, 39, 39);
+    }
+    td{
+        height:30px;
+        vertical-align:top;
+        border-right: 1px solid black;
+        border-left: 1px solid black;
+        text-align: center;
     }
 </style>
 <body>
+    <div class="header">LPU Members</div>
     <table>
         <thead>
             <tr>
-                <th></th>
-                <th></th>
-                <th></th>
+                <th>Sr No.</th>
+                <th>Name</th>
+                <th>Role</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td class="srno">1</td>
+                <td>Dingo</td>
+                <td>Staff</td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td class="srno">2</td>
+                <td>Silver</td>
+                <td>S. Staff</td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td class="srno">3</td>
+                <td>Chandler</td>
+                <td>S. Staff</td>
+            </tr>
+            <tr>
+                <td class="srno">4</td>
+                <td>Anky</td>
+                <td>Admin</td>
+            </tr>
+            <tr>
+                <td class="srno">5</td>
+                <td>Kamlesh</td>
+                <td>Peon</td>
             </tr>
         </tbody>
     </table>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<style>
+    body{
+        margin-left:0px;
+        margin-top:0px;
+    }
+    .box{
+        border: 2px solid black;
+        margin-bottom:3px;
+        margin-left: 2px;
+        margin-right:2px;
+    }
+    .parent{
+        margin-left:10%;
+        padding:10px;
+    }
+    div:first-child{
+        border-color: red;
+    }
+
+    div:first-child ::first-line{
+        color:blue;
+        font-variant: small-caps;
+    }
+
+    .box::first-letter{
+        color:green;
+        
+    }
+    .gif{
+        display:inline-block;
+    }
+
+    .gif::after{
+        content: url("https://media.tenor.com/images/65126e06c4c8ddc1318f3236439297fe/tenor.gif");
+    }
+
+    ::marker { 
+        color: red;
+        font-size: 23px;
+    }
+
+    ::selection {
+        color: red;
+        background: yellow;
+    }
+
+    /* Navigation Bar Styling */
+    .nav{
+        list-style-type: none;
+        width:3%;
+        background-color:brown;
+        position:fixed;
+        height:100%;
+        margin-top: 0px;
+    }
+
+    .nav li {
+        position:relative;
+        color: rgb(242, 255, 0);
+        text-decoration: none;
+        height:15%;
+        width:100%;
+        text-align: center;
+        right:50%;
+        top:18%;
+    }
+
+    .icon{
+        transform: scale(1.8);
+    }
+
+    .navlink a:active,a:visited{
+        color: rgb(242, 255, 0);
+    }
+
+    .nav li a i:hover{
+        color:brown;
+        transform: scale(1.8);
+        background-color: yellow;
+        border-radius: 50%;
+        padding:2px;
+    }
+
+    .dropbtn:hover .icon{
+        background-color: rgba(0,0,0,0);
+        color:yellow;
+        transform: rotate(-90deg) scale(2.2);
+        padding:10px;
+    }
+
+    .dropdown:hover .drop-content{
+        display:block;
+    }
+
+    .drop-content{
+        display: none;
+        position: absolute;
+        left:150%;
+        bottom:25%;
+        background-color: yellow;
+        color:brown;
+        width:150px;
+        height:150px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    
+    .nav li.drop-content a{
+        background-color: black;
+        color: brown;
+        padding: 12px 16px;
+        display: block;
+    }
+    
+</style>
+
+<body>
+    <!-- Navigation Bar -->
+    <ul class="nav">
+        <li class="navlink"><a href="#"><i class="material-icons">home</i></a></li>
+        <li class="navlink"><a href="#"><i class="material-icons">lightbulb</i></a></li>
+        <li class="navlink"><a href="#"><i class="material-icons">favorite</i></a></li>
+        <li class="navlink"><a href="#"><i class="material-icons">info</i></a></li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn"><i class="material-icons icon">arrow_drop_down</i></a>
+            <div class="drop-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </li>
+    </ul>
+
+    <!-- Content -->
+    <div class="parent">
+        <div class="box">
+            Random Line one<br>Random Line two <br> random line three
+        </div>
+        <div class="box gif">
+            Just anything written i dont care<br> whatever
+        </div>
+        <div class="box">
+            hello
+            <br>
+            <ul class="list">
+                <li>Dingo</li>
+                <li>Anky</li>
+                <li>Silver</li>
+                <li>Gareeb</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
