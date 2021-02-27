@@ -8,39 +8,44 @@
 </head>
 <style>
   .whatever{
-      height:260px;
-      width:98%;
-      margin:1%;
-      overflow-y:hidden;
-      border:2px solid blue;
-      white-space: nowrap;
+    height:260px;
+    width:98%;
+    margin:1%;
+    overflow-y:hidden;
+    border:2px solid blue;
+    white-space: nowrap;
   }
   .gallery {
-      margin: 5px;
-      border: 1px solid #ccc;
-      width: 180px;
-      display:inline-block;
-      white-space: normal;
+    margin: 5px;
+    border: 1px solid #ccc;
+    width: 180px;
+    display:inline-block;
+    white-space: normal;
   }
 
   .gallery:hover{
     position: absolute;
     top:52%;
     left:45%;
-    border: 1px solid  #777;
+    border: 10px solid transparent;
     transform:scaleX(2.5) scaleY(1.8);
     z-index: 1;
+    border-image:url(https://www.flaticon.com/svg/vstatic/svg/450/450427.svg?token=exp=1614266784~hmac=18ccbde930675432e4d59dfbb22cafd0) 100%;
   }
 
   .gallery img {
-      width: 100%;    
-      height: auto;   
+    width: 100%;    
+    height: auto;   
   }
 
   .desc {
-      padding: 15px;
-      text-align: center;
-      overflow:auto;
+    padding: 15px;
+    text-align: center;
+    overflow:auto;
+    background-image: linear-gradient(90deg, red,orange,yellow,green,blue,indigo,violet);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color:yellow;
+    text-overflow: ellipsis;
   }
 
   .display{
@@ -54,15 +59,20 @@
     font-size: x-large;
     padding: 30px;
   }
+  .display span{
+    color:white;
+    writing-mode: vertical-rl;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  }
 
 </style>
 <body>
   <div class="whatever">
     <div class="gallery">
-        <a target="_blank" href="#">
-          <img src="https://avatarfiles.alphacoders.com/715/71560.jpg" alt="Cinque Terre" width="600" height="400">
-        </a>
-        <div class="desc">Add a description of the image here</div>
+      <a target="_blank" href="#">
+        <img src="https://avatarfiles.alphacoders.com/715/71560.jpg" alt="Cinque Terre" width="600" height="400">
+      </a>
+      <div class="desc">Add a description of the image here</div>
     </div>
       
     <div class="gallery">
@@ -141,7 +151,9 @@
     </div>
   </div>
   <div class="display">
-      DISPLAY
+      <span>
+        DISPLAY
+      </span>
   </div>
 </body>
 </html>

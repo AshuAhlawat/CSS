@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+
+body{
+    margin: 0;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction:reverse;
+  animation-delay: 2s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+.nav{
+  height:100px;
+  width:100%;
+  padding-top:30px;
+
+  text-align:center;
+  font-size:50px;
+  color:aliceblue;
+  font-family:"Montserrat";
+
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+  animation-name: glare;
+  animation-delay: 0.2s;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-fill-mode: both;
+  
+}
+
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+
+@keyframes glare{
+  0% { background-image:linear-gradient(100deg,blue ,skyblue ,blue,blue); }
+  5%  { background-image:linear-gradient(95deg,blue ,skyblue ,blue,blue); }
+  10% { background-image:linear-gradient(90deg,blue ,skyblue ,blue,blue); }
+  15% { background-image:linear-gradient(85deg,blue ,skyblue ,blue,blue); }
+  20% { background-image:linear-gradient(80deg,blue ,skyblue ,blue,blue); }
+
+  25% { background-image:linear-gradient(75deg,blue ,skyblue ,blue,blue); }
+  30% { background-image:linear-gradient(70deg,blue ,skyblue ,blue,blue); }
+  35% { background-image:linear-gradient(65deg,blue ,skyblue ,blue,blue); }
+  40% { background-image:linear-gradient(60deg,blue ,skyblue ,blue,blue); }
+  45% { background-image:linear-gradient(55deg,blue ,skyblue ,blue,blue); }
+
+  50% { background-image:linear-gradient(50deg,blue ,skyblue ,blue,blue); }
+  55% { background-image:linear-gradient(45deg,blue ,skyblue ,blue,blue); }
+  60% { background-image:linear-gradient(40deg,blue ,skyblue ,blue,blue); }
+  65% { background-image:linear-gradient(35deg,blue ,skyblue ,blue,blue); }
+  70% { background-image:linear-gradient(30deg,blue ,skyblue ,blue,blue); }
+
+  75% { background-image:linear-gradient(25deg,blue ,skyblue ,blue,blue); }
+  80% { background-image:linear-gradient(20deg,blue ,skyblue ,blue,blue); }
+  85% { background-image:linear-gradient(15deg,blue ,skyblue ,blue,blue); }
+  90% { background-image:linear-gradient(10deg,blue ,skyblue ,blue,blue); }
+  95% { background-image:linear-gradient(5deg ,blue ,skyblue ,blue,blue); }
+
+  100% { background-image:linear-gradient(0deg,blue ,skyblue ,blue,blue); }
+
+}
+</style>
+</head>
+<body>
+<div class="nav"> WHATEVER HEADING </div>
+
+<br><br><br><br>
+
+<div class="box"></div>
+
+</body>
+</html>

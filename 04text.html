@@ -9,12 +9,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+    
     .main-header{
 
         text-align: center;
         text-shadow: 1px 1px 5px whitesmoke;
         font-size: 40px;
-        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-family:'DotGothic16';
         letter-spacing: 5px;
 
         margin-top: 30px;
@@ -67,6 +69,43 @@
         border-radius: 10px;
     }
 
+    .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    }
+
+    .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 1s;
+    }
+
+    .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border-style: solid;
+    border-color: black transparent transparent;
+    }
+
+    .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    }
+
     body{
         margin-left: 40px;
         margin-right: 40px;
@@ -87,6 +126,9 @@
             <br>
             <i class="material-icons">offline_bolt</i>
             FLASHBANG!!!!
+            <div class="tooltip">Hover over me
+                <span class="tooltiptext">Nothing here</span>
+            </div>              
             <br><br>
         </div>
     </div>

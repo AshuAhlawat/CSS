@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+</head>
+<style>
+
+    .over{
+        height:20px;
+        width:40px;
+        margin-bottom:60px;
+        border-radius: 5px;
+        transition: height 0.4s, width 2s;
+    }
+
+    .over:hover{
+        height:60px;
+        width:300px;
+        border-radius: 10px 30px 30px 10px;
+        margin-bottom:20px;
+    }
+
+    .name{
+        font-size:25px;
+        color:white;
+
+        position: relative;
+        left: 120px;
+        bottom: 65px;
+        z-index: 1;
+    }
+    .outer{
+        position:fixed;
+        top:45%;
+        left:45%;
+        border-radius: 50%;
+        height:100px;
+        width:100px;
+        background:red;
+        z-index:-1;
+    }
+    @keyframes loading {
+        from{
+            transform: rotate(0deg);
+        }        
+        to{
+            transform: rotate(360deg);
+        }
+    }
+    .inner{
+        position:fixed;
+        top:48.2%;
+        left:46.8%;
+        border-radius: 50%;
+        height:50px;
+        width:50px;
+        background:white;
+    }
+    .bar1{
+        position:fixed;
+        top:45%;
+        left:45%;
+        height:100px;
+        width:50px;
+        background:white;
+        z-index:1;
+        transform-origin: right;
+        animation-name:loading;
+        animation-duration: 3.3s;
+        animation-iteration-count: infinite;
+    }
+    .bar2{
+        position:fixed;
+        top:45%;
+        left:45%;
+        height:50px;
+        width:100px;
+        background:white;
+        z-index:1;
+        transform-origin: bottom;
+        animation-name:loading;
+        animation-duration: 3.5s;
+        animation-iteration-count: infinite;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div class="over" style="background:black;"></div><div class="name">Capti</div>
+    </div>
+    <div class="container">
+        <div class="over" style="background:blue;"></div><div class="name">Chandler</div>
+    </div>
+    <div class="container">
+        <div class="over" style="background:red;"></div><div class="name">Silver</div>
+    </div>
+    <div class="container">
+        <div class="over" style="background:green;"></div><div class="name">Buff</div>
+    </div>
+    <div class="container">
+        <div class="over" style="background:brown;"></div><div class="name">Anky</div>
+    </div>
+    <div class="container">
+        <div class="over" style="background:purple;"></div><div class="name">Gareeb</div>
+    </div>
+    <div class="container">
+        <div class="over" style="background:yellow;"></div><div class="name">Dingo</div>
+    </div>
+    <div class="outer"></div>
+    <div class="inner"></div>
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+</body>
+</html>
