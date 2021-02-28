@@ -42,18 +42,33 @@ select {
   border-radius: 4px;
   resize: vertical;
 }
-input[type=submit] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px 10px;
+.button {
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
   cursor: pointer;
-  float: right;
 }
 
-input[type=submit]:hover {
-  background-color: #45a049;
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 div{
   padding:80px;
@@ -94,7 +109,7 @@ h1{
   <br><br>
   <textarea>Some text...</textarea>
   <bR>
-  <input type="submit" value="Submit">
+  <input class="button button1" type="submit" value="Submit">
 </form>
 
 </body>
