@@ -11,13 +11,9 @@
     /* font imports */
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
-    
     /* body styles */
     body{
-        /* background-color: rgb(50,50,50); */
-        background-image: url(https://www.lpu.in/images/uni-mall.jpg);
-        background-size:cover;
+        background-color: rgb(50,50,50);
     }
     .container{
         display: grid;
@@ -96,7 +92,7 @@
 
         font-size: x-large;
         background-color: rgb(150, 50, 50);
-        color:rgb(179, 179, 179);
+        color:rgb(255,255,255);
 
         padding:10px;
         border-radius: 20px 20px 0px 0px;
@@ -139,7 +135,7 @@
         border-right:solid rgb(238, 238, 224);
         border-left:solid rgb(238, 238, 224);
 
-        background-color: rgba(100,100,100,0.8);
+        background-color: rgba(100,100,100,0.4);
     }
     .profile-info ul li{
         list-style: url("https://www.flaticon.com/svg/vstatic/svg/556/556232.svg?token=exp=1617174950~hmac=44bc0bcc202e3ec7bf9fe25b91bfa224");
@@ -156,9 +152,9 @@
 
         border-bottom:solid rgb(238, 238, 224);
 
-        background-color: rgba(10,10,10,0.6);
+        background-color: rgba(10,10,10,0.3);
 
-        overflow-y:scroll;
+        overflow:hidden;
     }
     .attendance-heading{
         font-family: Poppins;
@@ -167,6 +163,69 @@
         margin-left:4px;
         font-size:large;
     }
+
+    /* timetable style */
+    .timetable{
+        grid-row:5 / span 2;
+        grid-column: 3 / span 6;
+
+        border-bottom:solid rgb(238, 238, 224);
+
+        background-color: rgba(10,10,10,0.3);
+
+        overflow:hidden;
+    }
+    .timetable-heading{
+        font-family: Poppins;
+        color: white;
+
+        margin-left:4px;
+        font-size:large;
+    }
+
+    /* announcement styles */
+    .announcements{
+        grid-row:7 / span 1;
+        grid-column: 1 / span 4;
+
+        border-bottom:solid rgb(238, 238, 224);
+        border-right:solid rgb(238, 238, 224);
+
+        height: 50%;
+        overflow-y:scroll;
+
+        background-color: rgba(10,10,10,0.3);
+        color: white;
+    }
+    .announcement-heading{
+        font-family: Poppins;
+        color: white;
+
+        font-size:large;
+        margin-left:4px;
+        
+    }
+
+    /* leave styles */
+    .leave{
+        grid-row:7 / span 1;
+        grid-column: 5 / span 4;
+
+        border-bottom:solid rgb(238, 238, 224);
+
+        background-color: rgba(10,10,10,0.3);
+
+        height: 50%;
+        overflow-y:scroll;
+    }
+    .leave-heading{
+        font-family: Poppins;
+        color: white;
+
+        font-size:large;
+        margin-left:4px;
+    }
+
     progress{
         position: relative;
         left:15%;
@@ -174,6 +233,8 @@
         width:70%;
         height:12%;
         margin-bottom: 15px;
+
+        
     }
     progress::-webkit-progress-bar{
         background-color: yellow;
@@ -207,118 +268,6 @@
     progress.ECE::before{
         content:"ECE : 60%";
     }
-
-    /* timetable style */
-    .timetable{
-        grid-row:5 /span 2;
-        grid-column: 3 / span 6;
-
-        border-bottom:solid rgb(238, 238, 224);
-        background-color: rgba(10,10,10,0.6);
-        padding:0px;
-    }
-    .timetable-heading{
-        font-family: Poppins;
-        color: white;
-
-        margin-left:4px;
-        font-size:large;
-    }
-
-    table {
-        width:90%;
-
-        margin-top: 2%;
-        margin-left:5%;
-        margin-bottom: 0%;
-
-        border: 1px solid black;
-        border-radius: 5px;
-
-        font-size:x-large;
-        background-color:rgba(200, 200, 200, 0.5);
-    }
-
-    th{
-        padding:5px;
-        border-right: 1px solid rgb(39, 39, 39);
-
-        background-color:rgba(200, 200, 200, 0.5);
-        color:white;
-    }
-    td{
-        padding:7px;
-        border-bottom: 1px solid black;
-
-        text-align: center;
-        color:black;
-        font-size:large;
-    }
-    
-    /* announcement styles */
-    .announcements{
-        grid-row:7 / span 2;
-        grid-column: 1 / span 4;
-
-        border-bottom:solid rgb(238, 238, 224);
-        border-right:solid rgb(238, 238, 224);
-
-        overflow-y:scroll;
-
-        background-color: rgba(10,10,10,0.9);
-        color: white;
-    }
-    .announcement-heading{
-        font-family: Poppins;
-        color: white;
-
-        font-size:large;
-        margin-left:4px;
-        
-    }
-    .announcement{
-        width:100%;
-        margin-left: 10px;
-        float: left;
-        margin-bottom: 10px;
-    }
-    
-    /* leave styles */
-    .leave{
-        grid-row:7 / span 2;
-        grid-column: 5 / span 4;
-
-        border-bottom:solid rgb(238, 238, 224);
-
-        background-color: rgba(10,10,10,0.6);
-
-        overflow-y:scroll;
-    }
-    .leave-heading{
-        font-family: Poppins;
-        color: white;
-
-        font-size:large;
-        margin-left:4px;
-    }
-
-    ol.on-leave {
-        background: rgba(220,220,220,0.7);
-        padding: 20px;
-    }
-
-    ol.on-leave li {
-        background: rgba(20,20,20,0.7);
-        color:white;
-        font-size:small;
-        font-family: DotGothic16;
-
-        padding: 5px;
-        margin-left: 35px;
-    }
-
-    
-    
 </style>
 
 <body>  
@@ -384,34 +333,7 @@
         <div class="timetable">
             <div class="timetable-heading">Today's Time Table</div>
             <hr>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Timing</th>
-                        <th>Course</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="srno">9:00am - 11:00am</td>
-                        <td>CSE229</td>
-                    </tr>
-                    <tr>
-                        <td class="srno">12:00am - 01:00pm</td>
-                        <td>ECE393</td>
-                    </tr>
-                    <tr>
-                        <td class="srno">01:00pm - 02:00pm</td>
-                        <td>CHE074</td>
-                    </tr>
-                    <tr>
-                        <td class="srno">03:00pm - 05:00pm</td>
-                        <td>MEC882</td>
-                    </tr>
-                    
-                </tbody>
-            </table>
+            <br>
             
         </div>
 
@@ -419,16 +341,27 @@
             <div class="announcement-heading">Announcements</div>
             <hr>
             <br>
-            <div class="announcement">
-               First Announcements HERE
-            </div>
-            <div class="announcement">
-                Second Announcements HERE
-            </div>
-            <div class="announcement">
-                Third Announcements HERE
-            </div>
-            
+            --------------------------------------------------<br>
+            --------------------------------------------------<br>
+            --------------------------------------------------<br>
+            --------------------------------------------------<br>
+            --------------------------------------------------<br>
+            --------------------------------------------------<br>
+            --------------------------------------------------<br>
+            --------------------------------------------------<br>
+            --------------------------------------------------<br>
+            --------------------------------------------------<br>
+            --------------------------------------------------<br>
+            --------------------------------------------------<br>
+            --------------------------------------------------<br>
+            --------------------------------------------------<br>
+            --------------------------------------------------<br>
+            --------------------------------------------------<br>
+            --------------------------------------------------<br>
+            --------------------------------------------------<br>
+            --------------------------------------------------<br>
+            --------------------------------------------------<br>
+            --------------------------------------------------<br>
 
         </div>
 
@@ -436,11 +369,7 @@
             <div class="leave-heading">Teacher on Leave</div>
             <hr>
             <br>
-            <ol class="on-leave">
-                <li>Vishnu Sai</li>
-                <li>Upinder Kaur</li>
-                
-            </ol>
+
         </div>
     </div>
 </body>
